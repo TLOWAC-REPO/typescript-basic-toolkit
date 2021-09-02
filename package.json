@@ -6,7 +6,6 @@
   "author": "TLOWAC <leechanghun55@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prerelease": "standard-version -- --prerelease alpha",
     "release": "standard-version",
     "release:target": "standard-version -- --release-as",
     "test": "jest",
