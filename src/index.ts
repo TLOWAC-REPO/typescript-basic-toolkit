@@ -1,1 +1,3 @@
-// Write Your Code Here !
+function main() {
+  // Write Your Code Here !
+}
