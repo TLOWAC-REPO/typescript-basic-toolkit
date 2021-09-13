@@ -1,5 +1,5 @@
 codecov:
-  token: e5fb81bf-50f2-4d0a-afc4-b24e2f0efb8c
+  token: ${{ secrets.CODE_COV }}
   require_ci_to_pass: yes
 coverage:
   precision: 2
