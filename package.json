@@ -8,7 +8,7 @@
   "scripts": {
     "release": "standard-version",
     "release:target": "standard-version -- --release-as",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "typecheck": "tsc --noEmit",
     "lint": "eslint './src/**/*.{ts,tsx,js,jsx}'",
     "prepare": "husky install",
