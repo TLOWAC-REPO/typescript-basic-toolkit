@@ -2,10 +2,11 @@
   "name": "basic-foundation-boilerplate",
   "version": "1.0.3",
   "main": "index.js",
-  "repository": "git@github.com-chlee-tlowac:TLOWAC-REPO/basic-foundation-boilerplate.git",
+  "repository": "git@github.com:TLOWAC-REPO/typescript-basic-toolkit.git",
   "author": "TLOWAC <leechanghun55@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "ci": "rm -rf node_modules && yarn install --frozen-lockfile",
     "release": "standard-version",
     "release:target": "standard-version -- --release-as",
     "test": "jest --passWithNoTests",
@@ -13,8 +14,8 @@
     "lint": "eslint './src/**/*.{ts,tsx,js,jsx}'",
     "prepare": "husky install",
     "pre-commit": "yarn lint-staged",
-    "pre-push": "yarn typecheck && yarn test",
-    "commit-msg": "yarn commitlint"
+    "commit-msg": "yarn commitlint",
+    "pre-push": "yarn typecheck && yarn test"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
