@@ -1,16 +1,16 @@
-name: Slack Notification Action
+name: "[ Github Action ] Slack Notification" 
 on: [issues, issue_comment, gollum]
 
 jobs:
   # NOTE: on<issues>
   notifyIssue:
-    name: Notify issue-event to Slack
+    name: "[ Notification ] Issue event to Slack"
     runs-on: ubuntu-latest
 
     if: ${{github.event_name == 'issues'}}
 
     steps:
-      - name: Checkout
+      - name: ✅ Checkout repository
         uses: actions/checkout@v2
       # NOTE: action<open>
       - name: If action is open
@@ -69,13 +69,13 @@ jobs:
 
   # NOTE: on<issue-comment>
   notifyIssueComment:
-    name: Notify issue-comment-event to Slack
+    name: "[ Notification ] Issue comment event to Slack"
     runs-on: ubuntu-latest
 
     if: ${{github.event_name == 'issue_comment'}}
 
     steps:
-      - name: Checkout
+      - name: ✅ Checkout repository
         uses: actions/checkout@v2
       # NOTE: action<created>
       - name: If action is created
@@ -107,13 +107,13 @@ jobs:
 
   # NOTE: on<gollum= wiki>
   notifyGollum:
-    name: Notify gollum-event(wiki-related) to Slack
+    name: "[ Notification ] Wiki( gollum ) event to Slack"
     runs-on: ubuntu-latest
 
     if: ${{github.event_name == 'gollum'}}
 
     steps:
-      - name: Checkout
+      - name: ✅ Checkout repository
         uses: actions/checkout@v2
       # NOTE: pages.action<created>
       - name: If action is created
