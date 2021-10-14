@@ -1,3 +1,6 @@
+# Check if this `.codecov.yml` file is valid by running in local: 
+# curl -X POST --data-binary @.codecov.yml https://codecov.io/validate
+
 codecov:
   token: ${{ secrets.CODE_COV }}
   require_ci_to_pass: yes
