@@ -53,7 +53,8 @@ jobs:
               body:"Check your test",
               event: "REQUEST_CHANGES"
             })
-        if: failure()
+        if: |
+          failure() && github.event_name == 'pull_request'
 
   lint:
     name: Lint
