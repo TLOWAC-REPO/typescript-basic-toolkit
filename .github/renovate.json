@@ -5,7 +5,6 @@
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "matchCurrentVersion": "!/^0/",
-      "_comment": "if you don't want module update automatically then disable automerge property",
       "automerge": true
     }
   ]
