@@ -6,7 +6,7 @@
   "author": "TLOWAC <leechanghun55@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "ci": "rm -rf node_modules && yarn install --frozen-lockfile",
+    "ci": "rm -rf node_modules && yarn install",
     "release": "standard-version",
     "release:target": "standard-version -- --release-as",
     "test": "jest --passWithNoTests",
