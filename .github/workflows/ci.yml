@@ -24,7 +24,7 @@ jobs:
 
       - name: 🥾 Run integration tests
         run: yarn test
-      ## If you use cypress then enabled this option
+      # NOTE: If you use cypress then enabled this option
       # Start the web server so that cypress can run e2e tests against it. Notice "&" at end, this ensures it's run in the background.
       # - name: Start web server
       #   run: npm start &
@@ -33,8 +33,13 @@ jobs:
       #   run: npm run test:e2e
 
       - name: Collecting Code Coverage
-        uses: codecov/codecov-action@v1
-      
+      - uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          name: codecov-umbrella 
+          fail_ci_if_error: true 
+
+      # NOTE: If CI 'Test' Run Failed then Send Notification to Slack
       - name: Test Failure Comment Notification
         uses: actions/github-script@v3.1.1
         with:
