@@ -23,7 +23,7 @@ jobs:
         run: yarn ci
 
       - name: 🥾 Run integration tests
-        run: yarn test
+        run: yarn test --coverage
       # NOTE: If you use cypress then enabled this option
       # Start the web server so that cypress can run e2e tests against it. Notice "&" at end, this ensures it's run in the background.
       # - name: Start web server
@@ -32,7 +32,7 @@ jobs:
       # - name: Run e2e tests
       #   run: npm run test:e2e
 
-      - name: Collecting Code Coverage
+      - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
