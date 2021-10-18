@@ -41,7 +41,7 @@ jobs:
 
       # NOTE: If CI 'Test' Run Failed then Send Notification to Slack
       - name: Test Failure Comment Notification
-        uses: actions/github-script@v3.1.1
+        uses: actions/github-script@v5.0.0
         with:
           github-token: ${{github.token}}
           script: |
