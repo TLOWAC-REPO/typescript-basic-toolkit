@@ -135,7 +135,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Changelog
-        uses: mikepenz/release-changelog-builder-action@{latest-release}
+        id: github_release
+        uses: mikepenz/release-changelog-builder-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
