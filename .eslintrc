@@ -22,8 +22,8 @@
 
     // NOTE: 따옴표 사용시 " 와 ` 만 허용하는 설정. ( airbnb-base/recommand 에는 ' 로 설정됨 )
     "quotes": ["error", "double", { "allowTemplateLiterals": true }],
-    // NOTE: deploy flow 에서 console.log 허용하지 않는 설정 ( airbnb-base/recommand 에는 허용으로 설정됨 )
-    "no-console": ["error"],
+    // NOTE: console.log 사용시 warning ( airbnb-base/recommand 에는 허용으로 설정됨 )
+    "no-console": ["warn"],
 
     // ----------- About @typescript-eslint -----------
 
