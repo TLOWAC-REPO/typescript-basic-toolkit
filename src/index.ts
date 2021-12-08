@@ -1,6 +1,6 @@
-function main() {
+export function main() {
   // Write Your Code Here !
-  console.log("test")
+  return "";
 }
 
 main();
