@@ -36,8 +36,9 @@ jobs:
 
       - name: Codecov
         uses: codecov/codecov-action@v2
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }} 
+        run: yarn codecov
+        # with:
+        #   token: ${{ secrets.CODECOV_TOKEN }} 
 
       # NOTE: If CI 'Test' Run Failed then Send Notification to Slack
       - name: Test Failure Comment Notification
