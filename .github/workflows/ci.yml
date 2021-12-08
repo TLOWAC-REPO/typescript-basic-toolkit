@@ -34,12 +34,10 @@ jobs:
       # - name: Run e2e tests
       #   run: npm run test:e2e
 
-      - name: Upload coverage to Codecov
+      - name: Codecov
         uses: codecov/codecov-action@v2
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          name: codecov-umbrella 
-          fail_ci_if_error: false 
+          token: ${{ secrets.CODECOV_TOKEN }} 
 
       # NOTE: If CI 'Test' Run Failed then Send Notification to Slack
       - name: Test Failure Comment Notification
