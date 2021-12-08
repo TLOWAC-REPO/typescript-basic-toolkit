@@ -25,7 +25,9 @@ jobs:
         run: yarn ci
 
       - name: 🥾 Run integration tests
-        run: yarn run test --coverage
+        run: |
+          yarn test
+          bash <(curl -s https://codecov.io/bash)
       # NOTE: If you use cypress then enabled this option
       # Start the web server so that cypress can run e2e tests against it. Notice "&" at end, this ensures it's run in the background.
       # - name: Start web server

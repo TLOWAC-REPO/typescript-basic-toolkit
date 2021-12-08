@@ -11,8 +11,6 @@
     "release:target": "standard-version -- --release-as",
     "test": "jest",
     "typecheck": "tsc --noEmit",
-    "coverage": "jest --coverage",
-    "codecov": "./node_modules/.bin/codecov -f coverage/coverage-final.json",
     "lint": "eslint './src/**/*.{ts,tsx,js,jsx}'",
     "prepare": "husky install",
     "pre-commit": "yarn lint-staged",
@@ -39,6 +37,11 @@
     "typescript": "^4.4.4"
   },
   "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
+    ],
     "testMatch": [
       "<rootDir>/src/**/*.test.{js,jsx,ts,tsx}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
