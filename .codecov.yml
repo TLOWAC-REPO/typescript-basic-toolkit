@@ -2,9 +2,9 @@
 # curl -X POST --data-binary @.codecov.yml https://codecov.io/validate
 
 codecov:
-  max_report_age: off
   token: ${{ secrets.CODECOV_TOKEN }}
   require_ci_to_pass: true
+
 coverage:
   precision: 2
   round: down
@@ -15,6 +15,7 @@ coverage:
         threshold: 0%
         target: auto
     patch: false
+
 parsers:
   gcov:
     branch_detection:
@@ -22,6 +23,7 @@ parsers:
       loop: yes
       method: no
       macro: no
+      
 comment:
   layout: "reach,diff,flags,tree"
   behavior: default
