@@ -26,10 +26,8 @@ jobs:
 
       - name: 🥾 Run integration tests
         run: |
-          yarn test
+          yarn test --collectCoverage
           bash <(curl -s https://codecov.io/bash)
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }} 
       # NOTE: If you use cypress then enabled this option
       # Start the web server so that cypress can run e2e tests against it. Notice "&" at end, this ensures it's run in the background.
       # - name: Start web server
