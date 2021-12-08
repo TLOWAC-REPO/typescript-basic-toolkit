@@ -123,5 +123,5 @@ dist
 .pnp.*
 
 # testing
-__tests__/**/*
-*.test.*
+# __tests__/**/*
+# *.test.*
