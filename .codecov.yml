@@ -2,6 +2,7 @@
 # curl -X POST --data-binary @.codecov.yml https://codecov.io/validate
 
 codecov:
+  max_report_age: off
   token: ${{ secrets.CODECOV_TOKEN }}
   require_ci_to_pass: true
 coverage:
