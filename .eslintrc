@@ -39,7 +39,7 @@
         "groups": ["builtin", "external", ["parent", "sibling"], "index"],
         "pathGroups": [
           {
-            // "pattern": "", // => ex. "pattern" : "tlowac"
+            "pattern": "", // => ex. "pattern" : "tlowac"
             "group": "external",
             "position": "before"
           }
