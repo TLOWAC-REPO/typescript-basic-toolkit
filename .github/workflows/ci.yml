@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: ✅ Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: 📦 Setup Node.js for use with actions
         uses: actions/setup-node@v2
@@ -64,7 +64,7 @@ jobs:
 
     steps:
       - name: ✅ Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: 📦 Setup Node.js for use with actions
         uses: actions/setup-node@v2
